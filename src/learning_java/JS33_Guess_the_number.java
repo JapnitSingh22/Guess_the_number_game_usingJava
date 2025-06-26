@@ -12,15 +12,15 @@ class Game{
         this.number = rand.nextInt(100);
     }
     void takeUserInput(){
-        System.out.println("Guess the Number");
+        System.out.println("Guess the Number: ");
         Scanner sc = new Scanner(System.in);
         inputNumber = sc.nextInt();
     }
     boolean isCorrectNumber() {
         noOfGuesses++;
         if(inputNumber == number){
-            System.out.format("Yes the number you guessed is the correct answer," +
-                    " it is %d and you did guessed it in %d attempts", number, noOfGuesses);
+            System.out.println("Yes the number you guessed it right, the correct answer is: " + number);
+            System.out.println(" Total attempts you took: " + noOfGuesses);
             return true;
         }
         else if(inputNumber<number){
